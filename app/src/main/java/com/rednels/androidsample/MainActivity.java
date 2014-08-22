@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.TextureView;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -12,6 +13,7 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 import com.rednels.androidsample.sample.SwipeRefreshActivity;
+import com.rednels.androidsample.sample.TextureViewActivity;
 
 import java.util.List;
 
@@ -30,6 +32,9 @@ public class MainActivity extends Activity {
                 switch (i){
                     case 0:
                         startActivity(new Intent(MainActivity.this, SwipeRefreshActivity.class));
+                        break;
+                    case 1:
+                        startActivity(new Intent(MainActivity.this, TextureViewActivity.class));
                         break;
                 }
             }
@@ -51,6 +56,7 @@ public class MainActivity extends Activity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_settings) {
+            startActivity(new Intent(MainActivity.this, AboutActivity.class));
             return true;
         }
         return super.onOptionsItemSelected(item);
