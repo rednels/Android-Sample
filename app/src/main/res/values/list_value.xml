@@ -3,5 +3,6 @@
     <array name="main_list">
         <item>SwipeRefresh and AutoLoadMore ListView</item>
         <item>CameraTextureViewRecorder</item>
+        <item>RecyclerView</item>
     </array>
 </resources>

@@ -2,21 +2,18 @@ package com.rednels.androidsample.sample.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.util.Log;
-import android.view.Gravity;
-import android.view.MotionEvent;
 import android.widget.AbsListView;
-import android.widget.ListAdapter;
+import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
 /**
  * 自定义listview
  * 具有加载更多功能
- *
+ * <p/>
  * Created by liwubin on 2014/8/22.
  */
-public class LoadMoreListView extends ListView implements AbsListView.OnScrollListener{
+public class LoadMoreListView extends ListView implements AbsListView.OnScrollListener {
 
     private OnLoadMoreListener onLoadMoreListener;
     private boolean loadMore = false;
@@ -38,13 +35,13 @@ public class LoadMoreListView extends ListView implements AbsListView.OnScrollLi
         initLoadMore(context);
     }
 
-    private void initLoadMore(Context context){
+    private void initLoadMore(Context context) {
         setOnScrollListener(this);
     }
 
     @Override
     public void onScrollStateChanged(AbsListView absListView, int i) {
-        if (absListView.getLastVisiblePosition() > absListView.getCount() - 2 && !loading && loadMore){
+        if (absListView.getLastVisiblePosition() > absListView.getCount() - 2 && !loading && loadMore) {
             loadMore();
         }
     }
@@ -59,7 +56,7 @@ public class LoadMoreListView extends ListView implements AbsListView.OnScrollLi
             onLoadComplete();
     }
 
-    public OnLoadMoreListener getOnLoadMoreListener(){
+    public OnLoadMoreListener getOnLoadMoreListener() {
         return onLoadMoreListener;
     }
 
@@ -75,10 +72,12 @@ public class LoadMoreListView extends ListView implements AbsListView.OnScrollLi
         this.loadMore = loadMore;
     }
 
-    public void onLoadComplete(){
+    public void onLoadComplete() {
         loading = false;
+        ((BaseAdapter) getAdapter()).notifyDataSetChanged();
     }
-    public interface OnLoadMoreListener{
+
+    public interface OnLoadMoreListener {
         public boolean onLoadMore(LoadMoreListView view);
     }
 
