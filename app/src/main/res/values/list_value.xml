@@ -4,5 +4,8 @@
         <item>SwipeRefresh and AutoLoadMore ListView</item>
         <item>CameraTextureViewRecorder</item>
         <item>RecyclerView</item>
+        <item>LoadMoreRecyclerView</item>
+        <item>CardView base</item>
+        <item>CardView list</item>
     </array>
 </resources>

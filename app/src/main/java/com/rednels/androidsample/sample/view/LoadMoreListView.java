@@ -18,7 +18,6 @@ public class LoadMoreListView extends ListView implements AbsListView.OnScrollLi
     private OnLoadMoreListener onLoadMoreListener;
     private boolean loadMore = false;
     private boolean loading = false;
-    private ProgressBar mProgressBar;
 
     public LoadMoreListView(Context context) {
         super(context);

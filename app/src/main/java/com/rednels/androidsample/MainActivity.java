@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.rednels.androidsample.sample.CardViewBaseActivity;
+import com.rednels.androidsample.sample.CardViewListActivity;
+import com.rednels.androidsample.sample.LoadMoreRecyclerActivity;
 import com.rednels.androidsample.sample.RecyclerViewActivity;
 import com.rednels.androidsample.sample.SwipeRefreshActivity;
 import com.rednels.androidsample.sample.TextureViewActivity;
@@ -25,7 +28,7 @@ public class MainActivity extends Activity {
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                switch (i){
+                switch (i) {
                     case 0:
                         startActivity(new Intent(MainActivity.this, SwipeRefreshActivity.class));
                         break;
@@ -34,6 +37,15 @@ public class MainActivity extends Activity {
                         break;
                     case 2:
                         startActivity(new Intent(MainActivity.this, RecyclerViewActivity.class));
+                        break;
+                    case 3:
+                        startActivity(new Intent(MainActivity.this, LoadMoreRecyclerActivity.class));
+                        break;
+                    case 4:
+                        startActivity(new Intent(MainActivity.this, CardViewBaseActivity.class));
+                        break;
+                    case 5:
+                        startActivity(new Intent(MainActivity.this, CardViewListActivity.class));
                         break;
                 }
             }

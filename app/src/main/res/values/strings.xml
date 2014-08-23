@@ -7,5 +7,8 @@
     <string name="title_activity_swipe_refresh">SwipeRefreshActivity</string>
     <string name="title_activity_about">AboutActivity</string>
     <string name="title_activity_recycler_view">RecyclerViewActivity</string>
+    <string name="title_activity_load_more_recycler">LoadMoreRecyclerActivity</string>
+    <string name="title_activity_card_view_base">CardViewBaseActivity</string>
+    <string name="title_activity_card_view_list">CardViewListActivity</string>
 
 </resources>
