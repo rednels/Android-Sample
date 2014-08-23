@@ -9,5 +9,6 @@ the sample of android by rednels
 
     2. TextureView to record video use camera
 > 使用camera拍摄视频，TextureView作为预览视图，MediaRecorder录制
+
     3. RecycerView sample
 > 包含一个最基本的RecyclerView实现的列表，并实现了列表的Item点击事件
